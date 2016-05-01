@@ -6,20 +6,20 @@ var listState = []
 
 var provinces = entries(test);
 
-provinces.forEach( function (province) {
-    var name = province[1].name;
-    var districts = entries(province[1].districts);
-    var listDistricts = []
-    districts.forEach( function (item) {
-        var dis = item[1];
-        listDistricts.push(dis);
-    });
+provinces.forEach(function (province) {
+	var name = province[1].name;
+	var districts = entries(province[1].districts);
+	var listDistricts = []
+	districts.forEach(function (item) {
+		var dis = item[1];
+		listDistricts.push(dis);
+	});
 
-    var pro = {
-        name: name,
-        districts: listDistricts
-    }
-    listState.push(pro);
+	var pro = {
+		name: name,
+		districts: listDistricts
+	}
+	listState.push(pro);
 });
 
 var outputFilename = './province-district.json';
@@ -36,13 +36,7 @@ fs.writeFile(outputFilename, JSON.stringify(listState), function(err) {
 });
 */
 
-
-
-
 // READ FILE JSON
 
 var result = require('./province-district.json');
 console.log(result);
-
-
-

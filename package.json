@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "^1.5.2",
+    "node-xlsx": "^0.6.0",
     "object.entries": "^1.0.3"
   }
 }
